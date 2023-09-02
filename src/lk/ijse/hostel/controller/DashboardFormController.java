@@ -78,7 +78,7 @@ public class DashboardFormController {
 
     public void btnLogOutOnAction(ActionEvent actionEvent) throws IOException {
         Navigation.navigate(Routes.SETTING,home);
-        public
+
 
     }
 
