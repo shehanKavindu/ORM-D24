@@ -21,5 +21,6 @@ public class Reservation {
     private Student student;
     @ManyToOne
     private Room room;
-    private String status;
+
+
 }
