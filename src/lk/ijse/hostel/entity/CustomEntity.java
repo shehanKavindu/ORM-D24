@@ -32,8 +32,7 @@ public class CustomEntity {
         this.name = name;
         this.address = address;
         this.contact_no = contact_no;
-        this.dob = dob;
-        this.gender = gender;
+
 
     }
 }
