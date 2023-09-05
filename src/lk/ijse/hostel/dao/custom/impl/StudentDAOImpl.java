@@ -15,8 +15,8 @@ public class StudentDAOImpl implements StudentDAO {
 
     @Override
     public boolean save(Student entity) {
-        Session session= FactoryConfiguration.getInstance().getSession();
-        Transaction transaction=session.beginTransaction();
+        Session session = FactoryConfiguration.getInstance().getSession();
+        Transaction transaction = session.beginTransaction();
         try {
             session.save(entity);
             transaction.commit();
@@ -32,8 +32,8 @@ public class StudentDAOImpl implements StudentDAO {
 
     @Override
     public boolean delete(Student entity) {
-        Session session= FactoryConfiguration.getInstance().getSession();
-        Transaction transaction=session.beginTransaction();
+        Session session = FactoryConfiguration.getInstance().getSession();
+        Transaction transaction = session.beginTransaction();
         try {
             session.delete(entity);
             transaction.commit();
@@ -49,8 +49,8 @@ public class StudentDAOImpl implements StudentDAO {
 
     @Override
     public boolean update(Student entity) {
-        Session session= FactoryConfiguration.getInstance().getSession();
-        Transaction transaction=session.beginTransaction();
+        Session session = FactoryConfiguration.getInstance().getSession();
+        Transaction transaction = session.beginTransaction();
         try {
             session.update(entity);
             transaction.commit();
@@ -63,14 +63,15 @@ public class StudentDAOImpl implements StudentDAO {
             return false;
         }
     }
+
     @Override
     public ArrayList<Student> getAllStudent() {
-        Session session= FactoryConfiguration.getInstance().getSession();
-        Transaction transaction=session.beginTransaction();
+        Session session = FactoryConfiguration.getInstance().getSession();
+        Transaction transaction = session.beginTransaction();
         try {
             NativeQuery nativeQuery = session.createSQLQuery("SELECT * FROM Student");
             nativeQuery.addEntity(Student.class);
-            List<Student> studentList=nativeQuery.list();
+            List<Student> studentList = nativeQuery.list();
             transaction.commit();
             session.close();
             return (ArrayList<Student>) studentList;
@@ -81,7 +82,6 @@ public class StudentDAOImpl implements StudentDAO {
             return null;
         }
     }
-
 
 
 }
