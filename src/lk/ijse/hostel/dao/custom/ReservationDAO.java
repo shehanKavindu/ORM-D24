@@ -5,7 +5,7 @@ import lk.ijse.hostel.entity.Reservation;
 
 import java.util.ArrayList;
 
-public interface ReservationDAO extends SQLUtil<Reservation> {
+public interface  ReservationDAO extends SQLUtil<Reservation> {
     int getNotAvailableRoomCount(String room_type_id);
 
     String getLastId();
