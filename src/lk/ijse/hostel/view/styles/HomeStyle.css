@@ -20,7 +20,7 @@
 .menuItem:hover{
     -fx-background-color: #5734f4;
     -fx-border-color: #26059d;
-    -fx-border-width: 0px 5px 0px 0px;
+    -fx-border-width: 0px 5px 0px px;
     -fx-text-fill: #FFFFFF;
 
 }
