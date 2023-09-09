@@ -217,6 +217,7 @@ public class RegistrationFormController implements Initializable {
 
     public void cmbRoomTypeIDOnAction(ActionEvent actionEvent) {
         String value = cmbRoomTypeID.getValue();
+        System.out.println(value);
         RoomDTO room = reservationBO.getRoom(value);
         int notAvailableRoomCount = reservationBO.getNotAvailableRoomCount(value);
         lblAvailableRoomQTY.setText(String.valueOf(room.getQty() - notAvailableRoomCount));

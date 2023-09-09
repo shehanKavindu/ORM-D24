@@ -134,7 +134,7 @@ public class ManageStudentFormController implements Initializable {
                 if (isAdded) {
                     table.getItems().remove(table.getSelectionModel().getSelectedItem());
                     table.getSelectionModel().clearSelection();
-                    alert = new Alert(Alert.AlertType.INFORMATION, "Room has been successfully Deleted");
+                    alert = new Alert(Alert.AlertType.INFORMATION, "Student has been successfully Deleted");
                     clearAll();
                 } else {
                     alert = new Alert(Alert.AlertType.ERROR, "Error");
